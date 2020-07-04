@@ -1,24 +1,97 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Iniciar Sesion View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="IniciarSesionViewController" customModule="Lab11_Snapchat" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="isb-1n-1E3">
+                                <rect key="frame" x="87" y="124" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="Ooy-bV-OpW"/>
+                                    <constraint firstAttribute="width" constant="240" id="fQG-G5-Chd"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Usuario:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4id-QZ-VkM">
+                                <rect key="frame" x="170.5" y="281" width="73" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ingrese su usuario" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KoS-Em-lFk">
+                                <rect key="frame" x="107" y="327" width="200" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="V6U-ZW-8Qr"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" textContentType="username"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contraseña:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PTh-7t-Ude">
+                                <rect key="frame" x="154" y="386" width="106" height="22"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ingrese su contraseña" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lFF-SF-dWr">
+                                <rect key="frame" x="107" y="433" width="200" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="KGB-cI-Nus"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lna-2v-nHN">
+                                <rect key="frame" x="107" y="497" width="200" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="TVz-ac-NAb"/>
+                                </constraints>
+                                <state key="normal" title="Ingresar">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="iniciarSesionTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pOo-E5-FOZ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Lna-2v-nHN" firstAttribute="top" secondItem="lFF-SF-dWr" secondAttribute="bottom" constant="30" id="37g-NF-iHB"/>
+                            <constraint firstItem="lFF-SF-dWr" firstAttribute="top" secondItem="PTh-7t-Ude" secondAttribute="bottom" constant="25" id="4EN-40-8Cb"/>
+                            <constraint firstItem="KoS-Em-lFk" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9P6-U1-lIy"/>
+                            <constraint firstItem="lFF-SF-dWr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9TP-Xy-DUU"/>
+                            <constraint firstItem="PTh-7t-Ude" firstAttribute="top" secondItem="KoS-Em-lFk" secondAttribute="bottom" constant="25" id="B5p-1d-Gae"/>
+                            <constraint firstItem="Lna-2v-nHN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="HXO-gd-sP0"/>
+                            <constraint firstItem="KoS-Em-lFk" firstAttribute="top" secondItem="4id-QZ-VkM" secondAttribute="bottom" constant="25" id="KDi-S0-pa8"/>
+                            <constraint firstItem="4id-QZ-VkM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="VJ1-zf-xob"/>
+                            <constraint firstItem="PTh-7t-Ude" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="foY-Co-GZ6"/>
+                            <constraint firstItem="4id-QZ-VkM" firstAttribute="top" secondItem="isb-1n-1E3" secondAttribute="bottom" constant="29" id="gsW-9e-LaJ"/>
+                            <constraint firstItem="isb-1n-1E3" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="80" id="jNb-sZ-SUq"/>
+                            <constraint firstItem="isb-1n-1E3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qrr-2O-dcF"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="KoS-Em-lFk" id="tcQ-Qb-hZq"/>
+                        <outlet property="passwordTextField" destination="lFF-SF-dWr" id="J7Z-kJ-r75"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="132" y="89"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="logo" width="400" height="200"/>
+    </resources>
 </document>
